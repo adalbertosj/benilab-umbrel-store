@@ -3,10 +3,18 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: adalberto-omniview-ponte_go2rtc_1
-      APP_PORT: 1984
-      # O motor de vídeo já pede usuário e senha (omniview / senha deste app).
-      PROXY_AUTH_ADD: "false"
+      # A página da Ponte fica atrás do login do Umbrel (mostra a senha da Ponte).
+      APP_HOST: adalberto-omniview-ponte_web_1
+      APP_PORT: 8080
+
+  web:
+    image: ghcr.io/adalbertosj/omniview-server:1.0.7
+    restart: on-failure
+    command: ["node", "src/ponte.js"]
+    environment:
+      PONTE_SENHA: ${APP_PASSWORD}
+      GO2RTC_URL: http://adalberto-omniview-ponte_go2rtc_1:1984
+      VERSAO: "1.0.7"
 
   go2rtc:
     image: alexxit/go2rtc:1.9.14
@@ -22,7 +30,8 @@ services:
       - -config
       - '{"api": {"listen": ":1984", "username": "omniview", "password": "${APP_PASSWORD}", "origin": "*"}, "rtsp": {"listen": ":8554", "username": "omniview", "password": "${APP_PASSWORD}"}, "webrtc": {"listen": ""}}'
     ports:
-      # RTSP: o OmniView principal busca o vídeo por aqui (rede local / Tailscale)
+      # API (o OmniView principal lista as câmeras e cria o stream) e RTSP (o vídeo), ambos com senha
+      - 8791:1984
       - 8564:8554
     volumes:
       - ${APP_DATA_DIR}/data:/config
