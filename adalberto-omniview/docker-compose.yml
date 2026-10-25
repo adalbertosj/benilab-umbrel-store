@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/adalbertosj/omniview-server:1.0.1
+    image: ghcr.io/adalbertosj/omniview-server:1.0.2
     restart: on-failure
     stop_grace_period: 15s
     environment:
@@ -19,7 +19,12 @@ services:
       WEBRTC_PORT: 8555
       AI_URL: http://adalberto-omniview_ai_1:5000
       AI_SECRET: ${APP_SEED}
+      # Locais que podem ser escolhidos para as gravações (Ajustes › Armazenamento)
+      STORAGE_ROOTS: "/storage/arquivos=Arquivos do Umbrel,/storage/externo=Discos externos,/storage/rede=Rede (NAS)"
     volumes:
+      - ${UMBREL_ROOT}/home:/storage/arquivos
+      - ${UMBREL_ROOT}/external:/storage/externo:rslave
+      - ${UMBREL_ROOT}/network:/storage/rede:rslave
       - ${APP_DATA_DIR}/data/server:/data
       - ${APP_DATA_DIR}/data/recordings:/recordings
       - ${APP_DATA_DIR}/data/go2rtc:/go2rtc
@@ -37,7 +42,7 @@ services:
       - ${APP_DATA_DIR}/data/go2rtc:/config
 
   ai:
-    image: ghcr.io/adalbertosj/omniview-ai:1.0.1
+    image: ghcr.io/adalbertosj/omniview-ai:1.0.2
     restart: on-failure
     environment:
       OMNIVIEW_URL: http://adalberto-omniview_server_1:8787
