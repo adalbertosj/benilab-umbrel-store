@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview-ponte
 category: automation
 name: OmniView Ponte
-version: "1.0.5"
+version: "1.0.6"
 tagline: Leva as câmeras deste servidor para o seu OmniView
 description: >-
   Instale a Ponte em cada servidor que tem câmera — webcam USB ou a câmera embutida de um
@@ -17,7 +17,7 @@ description: >-
   A senha da Ponte aparece ao abrir este app (usuário "omniview"); você a informa no OmniView
   ao adicionar a câmera.
 releaseNotes: >-
-  Primeira versão.
+  Mesma versão do OmniView 1.0.6 (sem mudanças na Ponte).
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto

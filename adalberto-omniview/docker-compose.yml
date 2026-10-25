@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/adalbertosj/omniview-server:1.0.5
+    image: ghcr.io/adalbertosj/omniview-server:1.0.6
     restart: on-failure
     stop_grace_period: 15s
     environment:
@@ -42,7 +42,7 @@ services:
       - ${APP_DATA_DIR}/data/go2rtc:/config
 
   ai:
-    image: ghcr.io/adalbertosj/omniview-ai:1.0.5
+    image: ghcr.io/adalbertosj/omniview-ai:1.0.6
     restart: on-failure
     environment:
       OMNIVIEW_URL: http://adalberto-omniview_server_1:8787
