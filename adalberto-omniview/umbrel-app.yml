@@ -1,0 +1,44 @@
+manifestVersion: 1
+id: adalberto-omniview
+category: automation
+name: OmniView
+version: "1.0.0"
+tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
+description: >-
+  OmniView transforma seu Umbrel em uma central de vigilância completa.
+
+
+  - Mosaico ao vivo de todas as câmeras com nomes, organizadas por local e cômodo
+
+  - Tela cheia com áudio, zoom digital e conversa pela câmera (áudio bidirecional)
+
+  - Gravação contínua 24/7 em ciclo (os trechos mais antigos são substituídos)
+
+  - Linha do tempo com eventos coloridos e reprodução quase em tempo real
+
+  - IA local: pessoas, veículos, animais, sabotagem e reconhecimento facial
+
+  - Webcams USB, câmeras IP (Intelbras, Hikvision, Xiaomi, Tapo, ONVIF, RTSP) e celulares antigos como câmera
+
+  - Interfone/campainha virtual, modos Casa/Ausente/Noite e notificações (ntfy, Telegram, webhook)
+
+  - Acesso por iOS, Android, iPad, macOS e Windows pela sua Tailnet (Tailscale)
+
+  - Vários servidores OmniView unificados em um só aplicativo
+
+
+  Tudo roda localmente: nenhuma imagem sai da sua rede.
+releaseNotes: >-
+  Primeira versão.
+developer: Adalberto
+website: https://github.com/adalbertosj/omniview
+submitter: Adalberto
+submission: https://github.com/adalbertosj/omniview
+repo: https://github.com/adalbertosj/omniview
+support: https://github.com/adalbertosj/omniview/issues
+port: 8787
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
