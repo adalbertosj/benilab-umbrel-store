@@ -9,13 +9,13 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/adalbertosj/omniview-server:1.0.8
+    image: ghcr.io/adalbertosj/omniview-server:1.0.9
     restart: on-failure
     command: ["node", "src/ponte.js"]
     environment:
       PONTE_SENHA: ${APP_PASSWORD}
       GO2RTC_URL: http://adalberto-omniview-ponte_go2rtc_1:1984
-      VERSAO: "1.0.8"
+      VERSAO: "1.0.9"
 
   go2rtc:
     image: alexxit/go2rtc:1.9.14
