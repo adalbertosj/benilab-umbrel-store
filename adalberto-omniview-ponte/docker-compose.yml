@@ -9,13 +9,21 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/adalbertosj/omniview-server:1.0.9
+    image: ghcr.io/adalbertosj/omniview-server:1.1.0
     restart: on-failure
     command: ["node", "src/ponte.js"]
     environment:
       PONTE_SENHA: ${APP_PASSWORD}
       GO2RTC_URL: http://adalberto-omniview-ponte_go2rtc_1:1984
-      VERSAO: "1.0.9"
+      NOME: ${DEVICE_HOSTNAME}
+      AUDIO_CONFIG: /config/omniview-audio.yaml
+      VERSAO: "1.1.0"
+    ports:
+      # Microfones e alto-falantes deste servidor para o OmniView principal (com a senha da Ponte)
+      - 8792:8080
+    volumes:
+      - ${APP_DATA_DIR}/data:/config
+      - /proc/asound:/host/asound:ro
 
   go2rtc:
     image: alexxit/go2rtc:1.9.14
@@ -28,6 +36,8 @@ services:
       - go2rtc
       - -config
       - /config/go2rtc.yaml
+      - -config
+      - /config/omniview-audio.yaml
       - -config
       - '{"api": {"listen": ":1984", "username": "omniview", "password": "${APP_PASSWORD}", "origin": "*"}, "rtsp": {"listen": ":8554", "username": "omniview", "password": "${APP_PASSWORD}"}, "webrtc": {"listen": ""}}'
     ports:
