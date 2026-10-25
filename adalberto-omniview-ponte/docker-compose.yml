@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: adalberto-omniview-ponte_go2rtc_1
+      APP_PORT: 1984
+      # O motor de vídeo já pede usuário e senha (omniview / senha deste app).
+      PROXY_AUTH_ADD: "false"
+
+  go2rtc:
+    image: alexxit/go2rtc:1.9.14
+    restart: on-failure
+    # Acesso às webcams USB e à câmera embutida do notebook (/dev/video*).
+    privileged: true
+    # A segunda configuração liga a senha na API e no RTSP; streams criados pelo OmniView ficam
+    # gravados em /config/go2rtc.yaml.
+    command:
+      - go2rtc
+      - -config
+      - /config/go2rtc.yaml
+      - -config
+      - '{"api": {"listen": ":1984", "username": "omniview", "password": "${APP_PASSWORD}", "origin": "*"}, "rtsp": {"listen": ":8554", "username": "omniview", "password": "${APP_PASSWORD}"}, "webrtc": {"listen": ""}}'
+    ports:
+      # RTSP: o OmniView principal busca o vídeo por aqui (rede local / Tailscale)
+      - 8564:8554
+    volumes:
+      - ${APP_DATA_DIR}/data:/config

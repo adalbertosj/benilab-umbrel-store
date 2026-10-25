@@ -1,0 +1,33 @@
+manifestVersion: 1
+id: adalberto-omniview-ponte
+category: automation
+name: OmniView Ponte
+version: "1.0.5"
+tagline: Leva as câmeras deste servidor para o seu OmniView
+description: >-
+  Instale a Ponte em cada servidor que tem câmera — webcam USB ou a câmera embutida de um
+  notebook — e adicione essas câmeras no OmniView principal (Câmeras › Adicionar câmera ›
+  Outro servidor).
+
+
+  A Ponte só transmite a imagem para o OmniView, protegida por senha. Gravação, linha do tempo,
+  detecção, reconhecimento facial e alertas ficam no servidor principal.
+
+
+  A senha da Ponte aparece ao abrir este app (usuário "omniview"); você a informa no OmniView
+  ao adicionar a câmera.
+releaseNotes: >-
+  Primeira versão.
+developer: Adalberto
+website: https://github.com/adalbertosj/omniview
+submitter: Adalberto
+submission: https://github.com/adalbertosj/omniview
+repo: https://github.com/adalbertosj/omniview
+support: https://github.com/adalbertosj/omniview/issues
+icon: https://raw.githubusercontent.com/adalbertosj/omniview-umbrel-store/main/adalberto-omniview-ponte/icon.png
+port: 8790
+gallery: []
+path: ""
+defaultUsername: "omniview"
+deterministicPassword: true
+dependencies: []
