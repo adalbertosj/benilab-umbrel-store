@@ -3,18 +3,19 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      # A página da Ponte fica atrás do login do Umbrel (mostra a senha da Ponte).
+      # A página da Ponte abre direto (não mostra a senha; ela aparece nas credenciais do Umbrel).
       APP_HOST: adalberto-omniview-ponte_web_1
       APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/adalbertosj/omniview-server:1.0.7
+    image: ghcr.io/adalbertosj/omniview-server:1.0.8
     restart: on-failure
     command: ["node", "src/ponte.js"]
     environment:
       PONTE_SENHA: ${APP_PASSWORD}
       GO2RTC_URL: http://adalberto-omniview-ponte_go2rtc_1:1984
-      VERSAO: "1.0.7"
+      VERSAO: "1.0.8"
 
   go2rtc:
     image: alexxit/go2rtc:1.9.14
