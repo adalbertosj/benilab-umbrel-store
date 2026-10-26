@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/adalbertosj/omniview-server:1.2.1
+    image: ghcr.io/adalbertosj/omniview-server:1.2.2
     restart: on-failure
     stop_grace_period: 15s
     environment:
@@ -42,9 +42,11 @@ services:
       - 8555:8555/udp
     volumes:
       - ${APP_DATA_DIR}/data/go2rtc:/config
+      # /dev ao vivo: webcams ligadas depois do início também aparecem
+      - /dev:/dev
 
   ai:
-    image: ghcr.io/adalbertosj/omniview-ai:1.2.1
+    image: ghcr.io/adalbertosj/omniview-ai:1.2.2
     restart: on-failure
     environment:
       OMNIVIEW_URL: http://adalberto-omniview_server_1:8787
