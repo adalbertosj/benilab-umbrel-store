@@ -9,9 +9,11 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/adalbertosj/omniview-server:1.2.3
+    image: ghcr.io/adalbertosj/omniview-server:1.3.0
     restart: on-failure
     stop_grace_period: 15s
+    device_cgroup_rules:
+      - "c 81:* rmw"
     environment:
       GO2RTC_URL: http://adalberto-omniview_go2rtc_1:1984
       GO2RTC_RTSP: rtsp://adalberto-omniview_go2rtc_1:8554
@@ -28,6 +30,8 @@ services:
       - ${APP_DATA_DIR}/data/server:/data
       - ${APP_DATA_DIR}/data/recordings:/recordings
       - ${APP_DATA_DIR}/data/go2rtc:/go2rtc
+      # Ajustes das webcams USB (só os dispositivos de vídeo, pela regra device_cgroup_rules)
+      - /dev:/dev
       # Lista das placas de som do servidor (o Docker esconde /proc/asound dentro dos contêineres)
       - /proc/asound:/host/asound:ro
 
@@ -46,7 +50,7 @@ services:
       - /dev:/dev
 
   ai:
-    image: ghcr.io/adalbertosj/omniview-ai:1.2.3
+    image: ghcr.io/adalbertosj/omniview-ai:1.3.0
     restart: on-failure
     environment:
       OMNIVIEW_URL: http://adalberto-omniview_server_1:8787
