@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.1.0"
+version: "1.1.1"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Linha do tempo única no Ao vivo (todas as câmeras no mesmo horário), miniaturas do mesmo tamanho, engrenagem de ajustes nas miniaturas, locais que abrem e fecham com os cômodos dentro, e escolha da entrada e da saída de som de cada câmera (da câmera, do servidor ou de outro servidor com a Ponte).
+  Locais e cômodos em qualquer layout do Ao vivo (inclusive no celular), botão de microfone em todas as câmeras e opção de usar o microfone ou o alto-falante de outra câmera.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
