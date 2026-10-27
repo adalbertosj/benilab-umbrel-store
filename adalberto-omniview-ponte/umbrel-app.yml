@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview-ponte
 category: automation
 name: OmniView Ponte
-version: "1.3.1"
+version: "1.3.2"
 tagline: Leva as câmeras deste servidor para o seu OmniView
 description: >-
   Instale a Ponte em cada servidor que tem câmera — webcam USB ou a câmera embutida de um
@@ -17,7 +17,7 @@ description: >-
   Ao abrir este app aparece a página da Ponte com a senha, o endereço deste servidor e as câmeras
   detectadas — é só copiar para o OmniView.
 releaseNotes: >-
-  Acompanha a versão 1.3.1 do OmniView.
+  Câmeras convertidas pela Ponte (como a câmera FaceTime de MacBooks) gravam com taxa de dados limitada: cerca de um terço do tamanho, mesma nitidez.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto

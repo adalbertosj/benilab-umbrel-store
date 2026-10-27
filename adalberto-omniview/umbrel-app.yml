@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.3.1"
+version: "1.3.2"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Webcams como a Logitech C920 abrem rápido e ficam fluidas; tela cheia de verdade em todos os aparelhos; nas Gravações, som, tela cheia, agulha arrastável no Windows e exportação com duração livre (até 24 h); ajustes não interrompem mais a gravação das outras câmeras; apagar gravações por câmera e período em Ajustes › Armazenamento; app para Android (celular, tablet e TV).
+  Webcams convertidas no servidor gravam com taxa de dados limitada: arquivos bem menores, mesma abertura rápida.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
