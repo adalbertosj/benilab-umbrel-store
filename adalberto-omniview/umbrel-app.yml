@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.4.1"
+version: "1.4.2"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Corrige o Dashboard em tela cheia no iPhone (câmeras empilhadas e sem botão de fechar) e mostra o endereço tentado e dicas na tela de servidor indisponível.
+  Dashboard só com as câmeras: o menu fica escondido e desce ao puxar o topo da tela. Miniaturas das webcams e das Pontes mais leves (15 quadros/s), para muitas câmeras ao mesmo tempo não engasgarem.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
