@@ -5,23 +5,24 @@ services:
     environment:
       APP_HOST: adalberto-endoscope_web_1
       APP_PORT: 3000
-      # Dados de pacientes: o login do Umbrel fica na frente do app.
-      PROXY_AUTH_ADD: "true"
+      # O EndoScope tem login próprio, com perfis (Administrador, Usuário comum e Secretaria),
+      # necessário também para os apps de computador e celular acessarem a API.
+      PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/adalbertosj/endoscope:1.0.2
+    image: ghcr.io/adalbertosj/endoscope:1.1.0
     restart: on-failure
     stop_grace_period: 15s
     # O Chromium que gera os PDFs dos laudos precisa de memória compartilhada.
     shm_size: "256mb"
     healthcheck:
-      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/local/stats').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
       interval: 30s
       timeout: 5s
       retries: 3
     ports:
-      # Só para o HTTPS da Tailnet (tailscale serve --https=8448 → 127.0.0.1:8796), sem o login do
-      # Umbrel, cuja página de login não funciona em HTTPS. Não fica acessível pela rede local.
+      # Só para o HTTPS da Tailnet (tailscale serve --https=8448 → 127.0.0.1:8796).
+      # Não fica acessível pela rede local.
       - 127.0.0.1:8796:3000
     environment:
       DATA_DIR: /data
