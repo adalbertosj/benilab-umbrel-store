@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-endoscope
 category: files
 name: EndoScope
-version: "1.1.0"
+version: "1.2.0"
 tagline: Captura de exames endoscópicos, pacientes e laudos em PDF
 description: >-
   EndoScope roda 100% no seu Umbrel: nenhum dado de paciente sai da sua rede.
@@ -26,11 +26,8 @@ description: >-
 
   A tela de captura usa a câmera, que o navegador só libera em HTTPS (veja o README).
 releaseNotes: >-
-  Login próprio com perfis de acesso. Administrador: acesso a tudo, inclusive usuários e cópia dos
-  dados. Usuário comum: realiza exames e altera os seus; vê os dos outros sem alterar. Secretaria:
-  cadastra pacientes e usuários, vê e imprime exames e laudos, sem realizar exames. No primeiro
-  acesso, crie o Administrador; os exames que já existem ficam com ele. Antes de criar os perfis,
-  o app guarda uma cópia do banco atual na pasta de dados.
+  Nova identidade visual e apps para macOS, Windows, iPhone/iPad e Android, que se conectam ao
+  servidor pela Tailnet com o mesmo login. Correção no carregamento de imagens pelos apps.
 developer: Adalberto
 website: https://github.com/adalbertosj/endoscope
 submitter: Adalberto
