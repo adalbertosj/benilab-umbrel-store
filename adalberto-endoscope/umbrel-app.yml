@@ -1,0 +1,39 @@
+manifestVersion: 1
+id: adalberto-endoscope
+category: files
+name: EndoScope
+version: "1.0.0"
+tagline: Captura de exames endoscópicos, pacientes e laudos em PDF
+description: >-
+  EndoScope roda 100% no seu Umbrel: nenhum dado de paciente sai da sua rede.
+
+
+  - Cadastro de pacientes e exames
+
+  - Captura de fotos e vídeos do endoscópio (placa de captura ou câmera)
+
+  - Laudos com modelos, logo e assinatura, gerados em PDF
+
+  - Cadastros de hospitais, convênios, procedimentos e frases
+
+  - Cópia dos dados para o computador ou para a nuvem
+
+
+  Para trazer os dados da versão na nuvem, abra o app e acesse /local-admin.html.
+
+  A tela de captura usa a câmera, que o navegador só libera em HTTPS (veja o README).
+releaseNotes: >-
+  Primeira versão auto-hospedada.
+developer: Adalberto
+website: https://github.com/adalbertosj/endoscope
+submitter: Adalberto
+submission: https://github.com/adalbertosj/endoscope
+repo: https://github.com/adalbertosj/endoscope
+support: https://github.com/adalbertosj/endoscope/issues
+icon: https://raw.githubusercontent.com/adalbertosj/benilab-umbrel-store/main/adalberto-endoscope/icon.png
+port: 8795
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
