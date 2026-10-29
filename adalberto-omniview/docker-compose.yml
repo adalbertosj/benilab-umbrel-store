@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/adalbertosj/omniview-server:1.4.5
+    image: ghcr.io/adalbertosj/omniview-server:1.5.0
     restart: on-failure
     stop_grace_period: 15s
     device_cgroup_rules:
@@ -50,7 +50,7 @@ services:
       - /dev:/dev
 
   ai:
-    image: ghcr.io/adalbertosj/omniview-ai:1.4.5
+    image: ghcr.io/adalbertosj/omniview-ai:1.5.0
     restart: on-failure
     environment:
       OMNIVIEW_URL: http://adalberto-omniview_server_1:8787
