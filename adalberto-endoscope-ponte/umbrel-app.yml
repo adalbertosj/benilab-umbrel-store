@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: adalberto-endoscope-ponte
+category: files
+name: EndoScope Ponte
+version: "1.3.0"
+tagline: Leva a placa de captura deste servidor para o seu EndoScope
+description: >-
+  Instale a Ponte no computador (com Umbrel) que fica perto da torre de endoscopia e ligue nele a
+  placa de captura ou a câmera USB. No EndoScope principal (Fontes › Nova fonte › De uma Ponte),
+  adicione essa placa: ela passa a aparecer na tela Captura de qualquer aparelho da Tailnet.
+
+
+  A Ponte só transmite a imagem para o EndoScope principal, protegida por senha. Fotos, vídeos e
+  exames ficam no servidor principal.
+
+
+  Ao abrir este app aparece a página da Ponte com o endereço deste servidor e as placas detectadas.
+releaseNotes: >-
+  Primeira versão.
+developer: Adalberto
+website: https://github.com/adalbertosj/endoscope
+submitter: Adalberto
+submission: https://github.com/adalbertosj/endoscope
+repo: https://github.com/adalbertosj/endoscope
+support: https://github.com/adalbertosj/endoscope/issues
+icon: https://raw.githubusercontent.com/adalbertosj/benilab-umbrel-store/main/adalberto-endoscope-ponte/icon.png
+port: 8797
+gallery: []
+path: ""
+defaultUsername: "endoscope"
+deterministicPassword: true
+dependencies: []

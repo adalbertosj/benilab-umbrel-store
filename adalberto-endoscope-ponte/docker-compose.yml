@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # A página da Ponte abre direto (não mostra a senha; ela aparece nas credenciais do Umbrel).
+      APP_HOST: adalberto-endoscope-ponte_web_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+
+  web:
+    image: ghcr.io/adalbertosj/endoscope:1.3.0
+    restart: on-failure
+    command: ["node", "server/ponte.js"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080/saude').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    environment:
+      PORT: "8080"
+      PONTE_SENHA: ${APP_PASSWORD}
+      GO2RTC_URL: http://adalberto-endoscope-ponte_go2rtc_1:1984
+      NOME: ${DEVICE_HOSTNAME}
+      VERSAO: "1.3.0"
+
+  go2rtc:
+    image: alexxit/go2rtc:1.9.14
+    restart: on-failure
+    # Acesso às placas de captura e câmeras USB (/dev/video*).
+    privileged: true
+    # A segunda configuração liga a senha na API e no RTSP; os streams criados pelo EndoScope
+    # principal ficam gravados em /config/go2rtc.yaml. Sem WebRTC: o vídeo vai só para o principal.
+    command:
+      - go2rtc
+      - -config
+      - /config/go2rtc.yaml
+      - -config
+      - '{"api": {"listen": ":1984", "username": "endoscope", "password": "${APP_PASSWORD}", "origin": "*"}, "rtsp": {"listen": ":8554", "username": "endoscope", "password": "${APP_PASSWORD}"}, "webrtc": {"listen": ""}}'
+    ports:
+      # API (o principal lista as placas e cria o stream) e RTSP (o vídeo), ambos com senha.
+      # Portas diferentes das da OmniView Ponte (8791/8564), para as duas poderem conviver.
+      - 8798:1984
+      - 8566:8554
+    volumes:
+      - ${APP_DATA_DIR}/data:/config
+      # /dev ao vivo: placas ligadas depois do início também aparecem
+      - /dev:/dev

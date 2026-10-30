@@ -10,7 +10,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/adalbertosj/endoscope:1.2.0
+    image: ghcr.io/adalbertosj/endoscope:1.3.0
     restart: on-failure
     stop_grace_period: 15s
     # O Chromium que gera os PDFs dos laudos precisa de memória compartilhada.
@@ -26,5 +26,26 @@ services:
       - 127.0.0.1:8796:3000
     environment:
       DATA_DIR: /data
+      # Fontes de captura no servidor (placas e câmeras USB, aqui ou numa EndoScope Ponte).
+      GO2RTC_URL: http://adalberto-endoscope_go2rtc_1:1984
+      GO2RTC_RTSP: rtsp://adalberto-endoscope_go2rtc_1:8554
+      GO2RTC_CONFIG: /data/go2rtc/go2rtc.yaml
+      WEBRTC_PORT: "8556"
     volumes:
       - ${APP_DATA_DIR}/data:/data
+
+  go2rtc:
+    image: alexxit/go2rtc:1.9.14
+    restart: on-failure
+    # Acesso às placas de captura e câmeras USB ligadas a este servidor (/dev/video*).
+    privileged: true
+    command: ["go2rtc", "-config", "/config/go2rtc.yaml"]
+    ports:
+      # Vídeo ao vivo (WebRTC) para os aparelhos da Tailnet; 8555 é do OmniView.
+      - 8556:8556/tcp
+      - 8556:8556/udp
+    volumes:
+      # A mesma pasta que o servidor vê em /data/go2rtc (ele escreve a configuração).
+      - ${APP_DATA_DIR}/data/go2rtc:/config
+      # /dev ao vivo: placas ligadas depois do início também aparecem
+      - /dev:/dev

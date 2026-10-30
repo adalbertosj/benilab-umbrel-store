@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-endoscope
 category: files
 name: EndoScope
-version: "1.2.0"
+version: "1.3.0"
 tagline: Captura de exames endoscópicos, pacientes e laudos em PDF
 description: >-
   EndoScope roda 100% no seu Umbrel: nenhum dado de paciente sai da sua rede.
@@ -20,14 +20,19 @@ description: >-
 
   - Usuários com perfis: Administrador, Usuário comum e Secretaria
 
+  - Placas de captura ligadas ao servidor (ou a uma EndoScope Ponte), vistas ao vivo e usadas para
+    capturar de qualquer aparelho da Tailnet, com foto e gravação no próprio servidor
+
 
   No primeiro acesso, crie o usuário Administrador. Para trazer os dados da versão na nuvem,
   entre como Administrador e acesse /local-admin.html.
 
   A tela de captura usa a câmera, que o navegador só libera em HTTPS (veja o README).
 releaseNotes: >-
-  Nova identidade visual e apps para macOS, Windows, iPhone/iPad e Android, que se conectam ao
-  servidor pela Tailnet com o mesmo login. Correção no carregamento de imagens pelos apps.
+  Fontes de captura no servidor: a placa de captura da torre (ou uma câmera USB) pode ficar ligada
+  ao Umbrel ou a outro computador com a EndoScope Ponte. Ela aparece na tela Captura de qualquer
+  aparelho da Tailnet; fotos e vídeos são feitos no servidor, na qualidade original. Nova tela
+  Fontes (Administrador). Usa a porta 8556 para o vídeo ao vivo.
 developer: Adalberto
 website: https://github.com/adalbertosj/endoscope
 submitter: Adalberto
