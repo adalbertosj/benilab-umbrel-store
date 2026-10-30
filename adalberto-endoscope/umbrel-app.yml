@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-endoscope
 category: files
 name: EndoScope
-version: "1.4.0"
+version: "1.4.1"
 tagline: Captura de exames endoscópicos, pacientes e laudos em PDF
 description: >-
   EndoScope roda 100% no seu Umbrel: nenhum dado de paciente sai da sua rede.
@@ -29,9 +29,9 @@ description: >-
 
   A tela de captura usa a câmera, que o navegador só libera em HTTPS (veja o README).
 releaseNotes: >-
-  A Ponte agora também funciona em Mac e Windows, sem Umbrel: no app EndoScope de computador,
-  menu Ponte → Usar este computador como Ponte. A placa ligada nesse computador aparece na tela
-  Captura de qualquer aparelho da Tailnet, cadastrada em Fontes → De uma Ponte.
+  Fontes de captura: o botão de editar agora muda também a resolução (e o formato) de uma fonte já
+  cadastrada, sem precisar removê-la. A Ponte também funciona em Mac e Windows, pelo app EndoScope
+  de computador (menu Ponte).
 developer: Adalberto
 website: https://github.com/adalbertosj/endoscope
 submitter: Adalberto

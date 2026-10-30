@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-endoscope-ponte
 category: files
 name: EndoScope Ponte
-version: "1.4.0"
+version: "1.4.1"
 tagline: Leva a placa de captura deste servidor para o seu EndoScope
 description: >-
   Instale a Ponte no computador (com Umbrel) que fica perto da torre de endoscopia e ligue nele a
@@ -16,7 +16,7 @@ description: >-
 
   Ao abrir este app aparece a página da Ponte com o endereço deste servidor e as placas detectadas.
 releaseNotes: >-
-  Sem mudanças na Ponte do Umbrel; acompanha a versão 1.4.0 do EndoScope (Ponte também em Mac e Windows).
+  Sem mudanças na Ponte do Umbrel; acompanha a versão 1.4.1 do EndoScope.
 developer: Adalberto
 website: https://github.com/adalbertosj/endoscope
 submitter: Adalberto

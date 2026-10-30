@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/adalbertosj/endoscope:1.4.0
+    image: ghcr.io/adalbertosj/endoscope:1.4.1
     restart: on-failure
     command: ["node", "server/ponte.js"]
     healthcheck:
@@ -22,7 +22,7 @@ services:
       PONTE_SENHA: ${APP_PASSWORD}
       GO2RTC_URL: http://adalberto-endoscope-ponte_go2rtc_1:1984
       NOME: ${DEVICE_HOSTNAME}
-      VERSAO: "1.4.0"
+      VERSAO: "1.4.1"
 
   go2rtc:
     image: alexxit/go2rtc:1.9.14
