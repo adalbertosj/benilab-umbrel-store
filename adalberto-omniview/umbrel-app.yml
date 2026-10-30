@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.1"
+version: "1.5.2"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Imagem que congela por oscilação ou troca de rede (hotspot, Wi-Fi, computador acordando) volta sozinha em poucos segundos: o app percebe que os quadros pararam e reconecta.
+  OmniView Elo fora da sua rede: compartilhe só este servidor pelo Tailscale (a pessoa não entra na sua Tailnet e só alcança o OmniView). O convite já sai com o passo a passo, o link do Tailscale, o endereço e o código, pronto para enviar.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
