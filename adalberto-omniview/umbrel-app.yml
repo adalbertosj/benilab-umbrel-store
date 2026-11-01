@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.12"
+version: "1.5.13"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Notificações nativas: no iPhone e no iPad chegam mesmo com o app fechado (OmniView e OmniView Elo), com som de campainha quando alguém toca ou aparece na porta; no Mac e no Windows o app continua avisando com a janela fechada. Som da campainha por aparelho: sempre, desligado ou só quando você está em casa (pela localização do celular). Detecção de pessoas e rostos ligada de fábrica nas câmeras novas.
+  Rostos que aparecem com frequência: em Rostos › Não identificados, os rostos repetidos da mesma pessoa ainda sem cadastro aparecem agrupados, com sugestão de quem parece ser; salve o grupo como pessoa nova (ou junte a uma existente) com um toque. No iPhone, a opção “Só quando estou em casa” do som da campainha passa a aparecer, e o app mostra por que uma notificação chegou sem som.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
