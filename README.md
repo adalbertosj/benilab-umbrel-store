@@ -18,6 +18,7 @@ https://github.com/adalbertosj/benilab-umbrel-store
 | **OmniView Ponte** | Leva as câmeras de outro servidor (webcam USB ou câmera de notebook) para o OmniView |
 | **EndoScope** | Captura de exames endoscópicos, pacientes e laudos em PDF — tudo no seu Umbrel |
 | **EndoScope Ponte** | Leva a placa de captura de outro servidor (perto da torre de endoscopia) para o EndoScope |
+| **Calivix** | Ajuste fino para TVs Android/Google TV: limpeza, tela inicial limpa e perfis das TVs |
 
 ## Adicionar um app novo
 
