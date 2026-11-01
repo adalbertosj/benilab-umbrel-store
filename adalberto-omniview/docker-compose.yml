@@ -9,13 +9,14 @@ services:
       PROXY_AUTH_ADD: "false"
 
   server:
-    image: ghcr.io/adalbertosj/omniview-server:1.5.9
+    image: ghcr.io/adalbertosj/omniview-server:1.5.10
     restart: on-failure
     stop_grace_period: 15s
     device_cgroup_rules:
       - "c 81:* rmw"
     environment:
       GO2RTC_URL: http://adalberto-omniview_go2rtc_1:1984
+      OMNIVIEW_SELF_URL: http://adalberto-omniview_server_1:8787
       GO2RTC_RTSP: rtsp://adalberto-omniview_go2rtc_1:8554
       GO2RTC_CONFIG: /go2rtc/go2rtc.yaml
       WEBRTC_PORT: 8555
@@ -50,7 +51,7 @@ services:
       - /dev:/dev
 
   ai:
-    image: ghcr.io/adalbertosj/omniview-ai:1.5.9
+    image: ghcr.io/adalbertosj/omniview-ai:1.5.10
     restart: on-failure
     environment:
       OMNIVIEW_URL: http://adalberto-omniview_server_1:8787

@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.9"
+version: "1.5.10"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Câmeras na nuvem (Ajustes): conecte uma conta Tuya (Smart Life, Tuya Smart, Multilaser Liv) e adicione as câmeras e campainhas dela. Campainhas de bateria mostram a carga e ficam dormindo até alguém pedir a imagem ou ela ser acionada, para poupar a bateria.
+  Câmeras Tuya: a imagem passa a abrir também em campainhas que não aceitam WebRTC pela nuvem (como a Multilaser Liv SE220), com um endereço de vídeo novo a cada abertura.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
