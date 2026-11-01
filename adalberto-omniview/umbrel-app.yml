@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.13"
+version: "1.5.14"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Rostos que aparecem com frequência: em Rostos › Não identificados, os rostos repetidos da mesma pessoa ainda sem cadastro aparecem agrupados, com sugestão de quem parece ser; salve o grupo como pessoa nova (ou junte a uma existente) com um toque. No iPhone, a opção “Só quando estou em casa” do som da campainha passa a aparecer, e o app mostra por que uma notificação chegou sem som.
+  Ajustes › Som e avisos: novo lugar, fácil de achar, para escolher o som da campainha neste aparelho (sempre, só quando estou em casa ou desligado). No iPhone, a opção “Só quando estou em casa” agora aparece de fato.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
