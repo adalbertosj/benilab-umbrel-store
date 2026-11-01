@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.10"
+version: "1.5.11"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Câmeras Tuya: a imagem passa a abrir também em campainhas que não aceitam WebRTC pela nuvem (como a Multilaser Liv SE220), com um endereço de vídeo novo a cada abertura.
+  Câmera de campainha: qualquer câmera pode ser marcada, e os avisos dizem quem está na porta (“Adalberto na porta da frente” ou “Alguém na porta da frente”), com som e em qualquer modo. Campainhas Tuya (como a Multilaser Liv) avisam na hora o toque e o movimento, gravam só enquanto acionadas e procuram rostos conhecidos.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
