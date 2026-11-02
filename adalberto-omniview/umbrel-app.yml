@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.18"
+version: "1.5.19"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Campainha Liv SE220: o toque no botão passa a avisar (ela não informa o toque à nuvem, só acorda; o OmniView confere se há uma pessoa na porta antes de avisar). Rostos: em cada pessoa, "Procurar nas capturas das câmeras" mostra os rostos não identificados mais parecidos para você marcar e melhorar o reconhecimento.
+  Campainha Tuya (Liv SE220): o toque no botão avisa na hora, com notificação, som de campainha e a câmera ligando, sem esperar alguém aparecer na imagem. Se a campainha avisar sem ninguém tocar, ligue "Conferir se há alguém na porta" nos ajustes da câmera.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
