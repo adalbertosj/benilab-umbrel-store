@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.20"
+version: "1.5.21"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  OmniView Elo: em cada acesso, escolha se a pessoa recebe a campainha (chamada, notificação e som quando alguém toca ou aparece na porta). Os acessos que já existiam continuam recebendo; os novos começam sem.
+  Apps de Windows e Android (OmniView e OmniView Elo) se atualizam ao abrir: baixam a versão nova deste servidor e instalam. No Windows é tudo sozinho; no Android o sistema pede um toque em "Atualizar" (e, na primeira vez, a licença para instalar). A versão atual desses apps precisa ser instalada à mão uma última vez.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
