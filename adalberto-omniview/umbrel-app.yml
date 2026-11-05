@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.24"
+version: "1.5.25"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Reconhecimento facial mais preciso: novo modelo ArcFace, baixado sozinho na primeira abertura (cerca de 290 MB). As fotos de referência são recalculadas automaticamente.
+  Rostos virados agora também recebem nome, com o mesmo corte rigoroso. Só os rostos de frente continuam virando foto de referência.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
