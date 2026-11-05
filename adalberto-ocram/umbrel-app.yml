@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-ocram
 category: files
 name: Ocram
-version: "1.0.0"
+version: "1.0.1"
 tagline: Captura de imagens médicas, pacientes, exames e laudos
 description: >-
   O Ocram roda no seu Umbrel: nenhum dado de paciente sai da sua rede.
@@ -22,7 +22,7 @@ description: >-
   No primeiro acesso, crie o usuário Administrador. A câmera do aparelho, no navegador, só funciona
   em HTTPS; os apps nativos não têm essa limitação.
 releaseNotes: >-
-  Primeira versão.
+  Ícone sem margem e telas ajustadas para iPhone.
 developer: Adalberto
 website: https://github.com/adalbertosj/ocram
 submitter: Adalberto

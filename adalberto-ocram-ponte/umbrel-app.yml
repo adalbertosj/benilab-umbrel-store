@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-ocram-ponte
 category: files
 name: Ocram Ponte
-version: "1.0.0"
+version: "1.0.1"
 tagline: Leva a placa de captura deste servidor para o seu Ocram
 description: >-
   Instale a Ponte no computador com Umbrel que fica perto do equipamento e ligue nele a placa de
@@ -13,7 +13,7 @@ description: >-
   A Ponte só transmite a imagem para o Ocram principal, protegida por senha. Fotos, vídeos e exames
   ficam no servidor principal.
 releaseNotes: >-
-  Primeira versão.
+  Acompanha a versão 1.0.1 do Ocram.
 developer: Adalberto
 website: https://github.com/adalbertosj/ocram
 submitter: Adalberto
