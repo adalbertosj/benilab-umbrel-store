@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-omniview
 category: automation
 name: OmniView
-version: "1.5.22"
+version: "1.5.23"
 tagline: CFTV inteligente com gravação contínua, IA e reconhecimento facial
 description: >-
   OmniView transforma seu Umbrel em uma central de vigilância completa.
@@ -29,7 +29,7 @@ description: >-
 
   Tudo roda localmente: nenhuma imagem sai da sua rede.
 releaseNotes: >-
-  Rostos: selecione vários rostos não identificados de uma vez e adicione a uma pessoa cadastrada ou nova; veja e amplie todas as fotos de quem aparece com frequência, desmarcando as que não forem da pessoa; e sem o limite de 5 fotos de referência, que atrapalhava o reconhecimento.
+  Rostos: o botão de ver as fotos dos grupos em "Aparecem com frequência" volta a abrir as fotos.
 developer: Adalberto
 website: https://github.com/adalbertosj/omniview
 submitter: Adalberto
