@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: adalberto-ocram-ponte
+category: files
+name: Ocram Ponte
+version: "1.0.0"
+tagline: Leva a placa de captura deste servidor para o seu Ocram
+description: >-
+  Instale a Ponte no computador com Umbrel que fica perto do equipamento e ligue nele a placa de
+  captura ou a câmera USB. No Ocram principal (Administração › Fontes de captura › De uma Ponte),
+  adicione essa placa: ela aparece na captura de qualquer aparelho da Tailnet.
+
+
+  A Ponte só transmite a imagem para o Ocram principal, protegida por senha. Fotos, vídeos e exames
+  ficam no servidor principal.
+releaseNotes: >-
+  Primeira versão.
+developer: Adalberto
+website: https://github.com/adalbertosj/ocram
+submitter: Adalberto
+submission: https://github.com/adalbertosj/ocram
+repo: https://github.com/adalbertosj/ocram
+support: https://github.com/adalbertosj/ocram/issues
+icon: https://raw.githubusercontent.com/adalbertosj/benilab-umbrel-store/main/adalberto-ocram-ponte/icon.png
+port: 8804
+gallery: []
+path: ""
+defaultUsername: "ocram"
+deterministicPassword: true
+dependencies: []

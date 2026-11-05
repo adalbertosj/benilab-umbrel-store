@@ -1,0 +1,46 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: adalberto-ocram_web_1
+      APP_PORT: 3000
+      # O Ocram tem login próprio (Administrador, Médico e Secretaria), que os apps também usam.
+      PROXY_AUTH_ADD: "false"
+
+  web:
+    image: ghcr.io/adalbertosj/ocram:1.0.0
+    restart: on-failure
+    stop_grace_period: 15s
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    ports:
+      # Só para o HTTPS da Tailnet (tailscale serve --https=8472 → 127.0.0.1:8802).
+      - 127.0.0.1:8802:3000
+    environment:
+      DATA_DIR: /data
+      GO2RTC_URL: http://adalberto-ocram_go2rtc_1:1984
+      GO2RTC_RTSP: rtsp://adalberto-ocram_go2rtc_1:8554
+      GO2RTC_CONFIG: /data/go2rtc/go2rtc.yaml
+      WEBRTC_PORT: "8557"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+
+  go2rtc:
+    image: alexxit/go2rtc:1.9.14
+    restart: on-failure
+    # Acesso às placas de captura e câmeras USB ligadas a este servidor (/dev/video*).
+    privileged: true
+    command: ["go2rtc", "-config", "/config/go2rtc.yaml"]
+    ports:
+      # Vídeo ao vivo (WebRTC) de e para os aparelhos da Tailnet.
+      - 8557:8557/tcp
+      - 8557:8557/udp
+    volumes:
+      # A mesma pasta que o servidor vê em /data/go2rtc (ele escreve a configuração).
+      - ${APP_DATA_DIR}/data/go2rtc:/config
+      # /dev ao vivo: placas ligadas depois do início também aparecem
+      - /dev:/dev

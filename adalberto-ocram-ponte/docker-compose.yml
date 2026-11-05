@@ -1,0 +1,44 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      # A página da Ponte abre direto (não mostra a senha; ela aparece nas credenciais do Umbrel).
+      APP_HOST: adalberto-ocram-ponte_web_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
+
+  web:
+    image: ghcr.io/adalbertosj/ocram:1.0.0
+    restart: on-failure
+    command: ["node", "server/ponte.js"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080/saude').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    environment:
+      PORT: "8080"
+      PONTE_SENHA: ${APP_PASSWORD}
+      GO2RTC_URL: http://adalberto-ocram-ponte_go2rtc_1:1984
+      NOME: ${DEVICE_HOSTNAME}
+      VERSAO: "1.0.0"
+
+  go2rtc:
+    image: alexxit/go2rtc:1.9.14
+    restart: on-failure
+    privileged: true
+    # A segunda configuração liga a senha na API e no RTSP. Sem WebRTC: o vídeo vai só para o Ocram principal.
+    command:
+      - go2rtc
+      - -config
+      - /config/go2rtc.yaml
+      - -config
+      - '{"api": {"listen": ":1984", "username": "ocram", "password": "${APP_PASSWORD}", "origin": "*"}, "rtsp": {"listen": ":8554", "username": "ocram", "password": "${APP_PASSWORD}"}, "webrtc": {"listen": ""}}'
+    ports:
+      # API e RTSP, ambos com senha; portas próprias para conviver com as Pontes dos outros apps.
+      - 8803:1984
+      - 8567:8554
+    volumes:
+      - ${APP_DATA_DIR}/data:/config
+      - /dev:/dev

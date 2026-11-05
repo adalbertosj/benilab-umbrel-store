@@ -1,0 +1,38 @@
+manifestVersion: 1
+id: adalberto-ocram
+category: files
+name: Ocram
+version: "1.0.0"
+tagline: Captura de imagens médicas, pacientes, exames e laudos
+description: >-
+  O Ocram roda no seu Umbrel: nenhum dado de paciente sai da sua rede.
+
+
+  - Pacientes, exames, modelos de laudo e estatísticas
+
+  - Exames com placas de captura ligadas ao servidor ou a uma Ponte
+
+  - Exames com a câmera do próprio aparelho, pela interface do servidor ou pelos apps
+
+  - Tela Ao vivo: assista de qualquer aparelho da Tailnet aos exames em andamento
+
+  - Recebe exames feitos nos apps de iPhone, iPad, Android, Mac e Windows
+
+
+  No primeiro acesso, crie o usuário Administrador. A câmera do aparelho, no navegador, só funciona
+  em HTTPS; os apps nativos não têm essa limitação.
+releaseNotes: >-
+  Primeira versão.
+developer: Adalberto
+website: https://github.com/adalbertosj/ocram
+submitter: Adalberto
+submission: https://github.com/adalbertosj/ocram
+repo: https://github.com/adalbertosj/ocram
+support: https://github.com/adalbertosj/ocram/issues
+icon: https://raw.githubusercontent.com/adalbertosj/benilab-umbrel-store/main/adalberto-ocram/icon.png
+port: 8801
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []
