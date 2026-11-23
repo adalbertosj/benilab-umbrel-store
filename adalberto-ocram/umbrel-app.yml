@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-ocram
 category: files
 name: Ocram
-version: "3.2.4"
+version: "3.2.5"
 tagline: Captura de imagens médicas, pacientes, exames e laudos
 description: >-
   O Ocram roda no seu Umbrel: nenhum dado de paciente sai da sua rede.
@@ -22,7 +22,7 @@ description: >-
   No primeiro acesso, crie o usuário Administrador. A câmera do aparelho, no navegador, só funciona
   em HTTPS; os apps nativos não têm essa limitação.
 releaseNotes: >-
-  Os modelos de laudo do Ocram do computador podem ser enviados ao servidor (Configurações › Servidor e Ponte › Enviar modelos de laudo) e aparecem no laudo do navegador, iPhone, iPad e Android.
+  Modelos de laudo: reenviar os modelos do computador junta o item "MATERIAL PARA A.P" (sem o ponto final) ao nome certo, sem duplicar. Envio pelo Ocram do computador em Configurações › Servidor e Ponte › Enviar modelos de laudo.
 developer: Adalberto
 website: https://github.com/adalbertosj/ocram
 submitter: Adalberto
