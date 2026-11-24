@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-calivix
 category: automation
 name: Calivix
-version: "1.0.8"
+version: "1.0.9"
 tagline: Ajuste fino para suas TVs Android e Google TV
 description: >-
   Calivix guarda os perfis das suas TVs e aplica os ajustes pela rede.
@@ -27,9 +27,9 @@ description: >-
 
   Tudo fica no seu servidor.
 releaseNotes: >-
-  Calivix Carro: tela inicial própria para a box do carro (Cockpit, Palco ou Faixa), com atalho grande do YouTube,
-  cartão de áudio para qualquer app, grupos de apps em botões, papéis de parede (fotos e animados) que trocam sozinhos
-  e a Depuração por Wi-Fi ligada a cada partida. A tela inicial de fábrica continua instalada.
+  Calivix Carro: monitores na saída HDMI mostram o vídeo que toca na tela do carro ampliado, na proporção certa e
+  sem cortes (Netflix e outros apps protegidos usam o espelhamento normal da box). Três novos estilos do widget do
+  YouTube (Cinema, Vidro e Painel de bordo), escolhidos nos Ajustes, e os botões de rede e grupos abaixo do relógio.
 developer: Adalberto
 website: https://github.com/adalbertosj/calivix
 submitter: Adalberto
