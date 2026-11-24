@@ -1,0 +1,34 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: adalberto-orbe_web_1
+      APP_PORT: 3030
+      # O Orbe tem senha própria (com Face ID / Touch ID nos apps), que os apps também usam.
+      PROXY_AUTH_ADD: "false"
+
+  web:
+    image: ghcr.io/adalbertosj/orbe:0.2.0
+    restart: on-failure
+    stop_grace_period: 15s
+    user: "1000:1000"
+    ports:
+      # Só para o HTTPS da Tailnet (tailscale serve --https=8474 → 127.0.0.1:3030),
+      # que é o endereço dos apps do Mac, iPhone e iPad.
+      - 127.0.0.1:3030:3030
+    environment:
+      TZ: America/Belem
+      ORBE_DADOS: /dados
+      # Chave mestra (o dia a dia usa a senha); o Umbrel gera uma por instalação.
+      ORBE_TOKEN: ${APP_SEED}
+      # Na primeira partida, a pasta vazia vira a pasta de dados do Orbe.
+      # Ao apontar /dados para um disco externo, troque para "0": assim, com o disco
+      # desligado, o Orbe se recusa a começar em vez de gravar no disco interno.
+      ORBE_INICIAR_SE_VAZIA: "1"
+    volumes:
+      # Vídeos, laudos e banco. Para usar um disco externo, troque por, por exemplo,
+      #   /home/umbrel/umbrel/external/<disco>/orbe-dados:/dados
+      - ${APP_DATA_DIR}/data:/dados
+    # Deixa um núcleo livre para o Umbrel enquanto converte vídeos.
+    cpus: "3"

@@ -1,0 +1,42 @@
+manifestVersion: 1
+id: adalberto-orbe
+category: files
+name: Orbe
+version: "0.2.0"
+tagline: Acervo dos seus vídeos de procedimentos, com laudos e marcadores
+description: >-
+  O Orbe guarda, organiza e mostra os vídeos dos seus procedimentos, no seu Umbrel: nenhum dado
+  de paciente sai da sua rede.
+
+
+  - Biblioteca com busca em laudos, conclusões, notas, marcadores e etiquetas
+
+  - Página do exame com o vídeo, marcadores de momentos, laudo, notas e arquivos
+
+  - Adicionar a pasta inteira de um paciente ou só a de um exame, com os dados preenchidos pelo
+  perfil do aplicativo de origem (como o Ocram)
+
+  - Vídeos soltos com os dados de uma pasta, de um exame já no Orbe ou digitados
+
+  - Perfis com as suas instruções sobre como cada aplicativo guarda os arquivos
+
+  - Senha simples, login contínuo e Face ID / Touch ID nos apps de Mac, iPhone e iPad
+
+
+  No primeiro acesso, crie a senha do Orbe.
+releaseNotes: >-
+  Primeira versão na loja: senha com login contínuo, fontes, pastas de exame avulsas reconhecendo o
+  paciente já cadastrado, e perfis com as suas instruções.
+developer: Adalberto
+website: https://github.com/adalbertosj/orbe
+submitter: Adalberto
+submission: https://github.com/adalbertosj/orbe
+repo: https://github.com/adalbertosj/orbe
+support: https://github.com/adalbertosj/orbe/issues
+icon: https://raw.githubusercontent.com/adalbertosj/benilab-umbrel-store/main/adalberto-orbe/icon.png
+port: 8804
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+dependencies: []

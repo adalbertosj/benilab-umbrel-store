@@ -19,6 +19,7 @@ https://github.com/adalbertosj/benilab-umbrel-store
 | **EndoScope** | Captura de exames endoscópicos, pacientes e laudos em PDF — tudo no seu Umbrel |
 | **EndoScope Ponte** | Leva a placa de captura de outro servidor (perto da torre de endoscopia) para o EndoScope |
 | **Calivix** | Ajuste fino para TVs Android/Google TV: limpeza, tela inicial limpa e perfis das TVs |
+| **Orbe** | Acervo dos vídeos de procedimentos, com laudos, marcadores e busca — tudo no seu Umbrel |
 
 ## Adicionar um app novo
 
