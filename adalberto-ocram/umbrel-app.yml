@@ -2,7 +2,7 @@ manifestVersion: 1
 id: adalberto-ocram
 category: files
 name: Ocram
-version: "3.2.5"
+version: "3.2.6"
 tagline: Captura de imagens médicas, pacientes, exames e laudos
 description: >-
   O Ocram roda no seu Umbrel: nenhum dado de paciente sai da sua rede.
@@ -22,7 +22,7 @@ description: >-
   No primeiro acesso, crie o usuário Administrador. A câmera do aparelho, no navegador, só funciona
   em HTTPS; os apps nativos não têm essa limitação.
 releaseNotes: >-
-  Modelos de laudo: reenviar os modelos do computador junta o item "MATERIAL PARA A.P" (sem o ponto final) ao nome certo, sem duplicar. Envio pelo Ocram do computador em Configurações › Servidor e Ponte › Enviar modelos de laudo.
+  Laudo em duas abas: "Modelos" (como antes) e "Em branco", uma folha em branco com editor de texto (fonte, tamanho, negrito, itálico, sublinhado, sombra, cores, realce, alinhamento, entrelinhas, recuos, listas, colunas) e opção de usar o cabeçalho configurado ou deixar a área em branco. Um laudo por modelos pode ser refeito em branco e vice-versa.
 developer: Adalberto
 website: https://github.com/adalbertosj/ocram
 submitter: Adalberto

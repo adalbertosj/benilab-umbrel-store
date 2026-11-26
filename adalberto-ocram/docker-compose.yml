@@ -9,7 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    image: ghcr.io/adalbertosj/ocram:3.2.5
+    image: ghcr.io/adalbertosj/ocram:3.2.6
     restart: on-failure
     stop_grace_period: 15s
     healthcheck:
